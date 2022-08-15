@@ -4,6 +4,12 @@ import adapter from '@sveltejs/adapter-auto';
 const config = {
 	kit: {
 		adapter: adapter()
+	},
+	alias: {
+		$components: './src/components',
+		$routes: './src/routes',
+		$stores: './src/stores',
+		$utils: './src/utils'
 	}
 };
 
