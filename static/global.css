@@ -33,6 +33,9 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
+html {
+	background-color: black;
+}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
