@@ -1,12 +1,14 @@
 <script>
-	import FaceControls from '$components/FaceControls.svelte'
-	import FaceView from '../components/FaceView.svelte'
+	import FaceControls from '$facemaker_components/FaceControls.svelte'
+	import FaceView from '$facemaker_components/FaceView.svelte'
+	// import DoubleTorusExperiment from '../experiments/DoubleTorusExperiment.svelte';
 </script>
 
 
 <div id="face-creator">
 	<div id="face-view">
 		<FaceView />
+		<!-- <DoubleTorusExperiment /> -->
 	</div>
 	<div id="face-controls">
 		<FaceControls />
@@ -16,21 +18,19 @@
 
 <style>
 	#face-creator {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
 		height: 100vh;
-		justify-content: space-evenly;
 		width: 100vw;
 	}
 	#face-view {
-		border: 3px solid blue;
-		height: 60vh;
-		width: 90%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 1;
 	}
 	#face-controls {
-		border: 3px solid green;
-		height: 30vh;
-		width: 90%;
+		position: fixed;
+		bottom: 1vh;
+		left: 10vw;
+		z-index: 2;
 	}
 </style>

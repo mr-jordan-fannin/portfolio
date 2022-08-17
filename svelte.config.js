@@ -5,10 +5,10 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$components: './src/components',
 			$routes: './src/routes',
-			$stores: './src/stores',
-			$utils: './src/utils'
+			$facemaker_components: './src/projects/facemaker/components',
+			$facemaker_stores: './src/projects/facemaker/stores',
+			$facemaker_utils: './src/projects/facemaker/utils'
 		}
 	}
 };
