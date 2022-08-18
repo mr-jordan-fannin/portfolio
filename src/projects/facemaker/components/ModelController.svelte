@@ -1,7 +1,7 @@
 <script>
 	import faceStore from '$facemaker_stores/faceStore'
 
-	export let coordinate, model, min=-5, max=5, step=0.5
+	export let coordinate, model, min=-10, max=10, step=0.5
 
 	const update = () => $faceStore = $faceStore.updateLines()
 </script>
