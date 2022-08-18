@@ -1,8 +1,6 @@
 <script>
 	import faceStore from '$facemaker_stores/faceStore'
 	import ModelControls from '$facemaker_components/ModelControls.svelte'
-
-	console.log($faceStore)
 </script>
 
 
