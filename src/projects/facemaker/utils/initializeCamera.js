@@ -6,8 +6,8 @@ export default function initializeCamera({
 	aspect=window.innerWidth / window.innerHeight,
 	near=0.1,
 	far=1000,
-	x=0,
-	y=0,
+	x=2,
+	y=2,
 	z=15
 }) {
 

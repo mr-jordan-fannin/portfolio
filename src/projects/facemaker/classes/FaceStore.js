@@ -94,19 +94,19 @@ export default class FaceStore {
 			z: 1.5,
 		})),
 		jaw_left: makeSphere(new NodeSphere({
-			c: 'cyan',
+			c: 'lightgray',
 			x: 3.5,
 			y: -2,
 			z: 0,
 		})),
 		jaw_right: makeSphere(new NodeSphere({
-			c: 'skyblue',
+			c: 'darkgray',
 			x: -3.5,
 			y: -2,
 			z: 0,
 		})),
 		mouth_left: makeSphere(new NodeSphere({
-			c: 'aqua',
+			c: 'skyblue',
 			x: 1.5,
 			y: -1,
 			z: 2,
@@ -118,7 +118,7 @@ export default class FaceStore {
 			z: 2,
 		})),
 		mouth_right: makeSphere(new NodeSphere({
-			c: 'aqua',
+			c: 'lightblue',
 			x: -1.5,
 			y: -1,
 			z: 2,

@@ -16,6 +16,9 @@
 
 <style>
 	#face-view-canvas {
-		border: 1px solid orange;
+		left: 0;
+		position: fixed;
+		top: 0;
+		z-index: 1;
 	}
 </style>

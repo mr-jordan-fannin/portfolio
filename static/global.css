@@ -34,6 +34,7 @@ q:before, q:after {
 	content: none;
 }
 html {
+	color: white;
 	background-color: black;
 	font-family: Arial, Helvetica, sans-serif;
 }

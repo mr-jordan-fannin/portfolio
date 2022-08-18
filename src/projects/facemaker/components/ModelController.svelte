@@ -8,23 +8,14 @@
 
 
 <div class="position-control">
-	<span>{coordinate.toUpperCase()}: {model.position[coordinate]}</span>
+	<div>{coordinate.toUpperCase()}: {model.position[coordinate]}</div>
 	<input type="range" {min} {max} {step} bind:value={model.position[coordinate]} on:input={update}>
 </div>
 
 
 <style>
 	.position-control {
-		display: flex;
-		justify-content: space-evenly;
-		width: 20vw;
-	}
-	span {
-		padding-left: 10%;
-		width: 40%;
-	}
-	input {
+		width: 33vw;
 		text-align: center;
-		width: 50%;
 	}
 </style>
