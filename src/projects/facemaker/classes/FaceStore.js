@@ -15,7 +15,7 @@ export default class FaceStore {
 			z: 2,
 		})),
 		cranium: makeSphere(new NodeSphere({
-			c: 'white',
+			c: 'dimgray',
 			r: 4,
 			x: 0,
 			y: 3.5,
