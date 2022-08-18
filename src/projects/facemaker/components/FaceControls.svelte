@@ -8,7 +8,7 @@
 	{#each [ ...Object.entries($faceStore.nodes) ] as node, i}
 		<div class="control-column" style="border: 3px solid {node[1].color};">
 			<h1>{node[0].toUpperCase()}</h1>
-			<ModelControls model={node[1]} />
+			<ModelControls node={node[1]} />
 		</div>
 	{/each}
 </div>

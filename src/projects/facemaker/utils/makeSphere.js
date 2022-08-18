@@ -2,6 +2,7 @@ import * as THREE from 'three'
 
 export default function makeSphere({
 	c=0x00ff00,
+	n='',
 	r=5,
 	s=32,
 	w=true,
@@ -15,6 +16,8 @@ export default function makeSphere({
 	const sphereMaterial = new THREE.MeshBasicMaterial({color: c, wireframe: w})
 
 	const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
+
+	sphere.name = n
 
 	sphere.position.x = x
 

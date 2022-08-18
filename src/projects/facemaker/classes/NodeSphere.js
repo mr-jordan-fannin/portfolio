@@ -2,6 +2,7 @@ export default class NodeSphere {
 	constructor({
 		c = 0xff0000,
 		m = null,
+		n = '',
 		r = .5,
 		s = 16,
 		w = true,
@@ -11,6 +12,7 @@ export default class NodeSphere {
 	}) {
 		this.c = c
 		this.m = m
+		this.n = n
 		this.r = r
 		this.s = s
 		this.w = w

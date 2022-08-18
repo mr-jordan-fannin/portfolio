@@ -1,13 +1,13 @@
 <script>
 	import ModelController from '$facemaker_components/ModelController.svelte'
-	export let model
+	export let node
 </script>
 
 
 <div class="model-controls">
-	<ModelController {model} coordinate='x' />
-	<ModelController {model} coordinate='y' />
-	<ModelController {model} coordinate='z' />
+	<ModelController {node} coordinate='x' />
+	<ModelController {node} coordinate='y' />
+	<ModelController {node} coordinate='z' />
 </div>
 
 
