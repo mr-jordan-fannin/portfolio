@@ -53,14 +53,14 @@ export default class FaceStore {
 		})),
 		eartip_left: makeSphere(new NodeSphere({
 			c: 'tan',
-			x: 5,
-			y: 3,
+			x: 5.5,
+			y: 4.5,
 			z: -2,
 		})),
 		eartip_right: makeSphere(new NodeSphere({
 			c: 'brown',
-			x: -5,
-			y: 3,
+			x: -5.5,
+			y: 4.5,
 			z: -2,
 		})),
 		eye_left: makeSphere(new NodeSphere({
@@ -83,14 +83,14 @@ export default class FaceStore {
 		})),
 		horn_left: makeSphere(new NodeSphere({
 			c: 'violet',
-			x: 2,
-			y: 7,
+			x: 3,
+			y: 8,
 			z: 1.5,
 		})),
 		horn_right: makeSphere(new NodeSphere({
 			c: 'indigo',
-			x: -2,
-			y: 7,
+			x: -3,
+			y: 8,
 			z: 1.5,
 		})),
 		jaw_left: makeSphere(new NodeSphere({
