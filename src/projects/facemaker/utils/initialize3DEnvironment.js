@@ -4,42 +4,45 @@ import animationLoop from '$facemaker_utils/animationLoop'
 import initializeCamera from '$facemaker_utils/initializeCamera'
 import initializeOrbitControls from '$facemaker_utils/initializeOrbitControls'
 import initializeRenderer from '$facemaker_utils/initializeRenderer'
+import makeGroup from '$facemaker_utils/makeGroup'
 import makePlane from '$facemaker_utils/makePlane'
 import makePointLight from '$facemaker_utils/makePointLight'
 import makeSkin from '$facemaker_utils/makeSkin'
 
 
-export default function initialize3DEnvironment(canvas, modelArray) {
+export default function initialize3DEnvironment(canvas, store) {
 
 	console.log('Initializing 3D Canvas...')
-
-	// Scene
-	const scene = new THREE.Scene()
 
 	// Camera
 	const camera = initializeCamera({})
 
-	// Plane
-	scene.add(makePlane())
-
 	// Renderer
 	const renderer = initializeRenderer(canvas)
 
-	// Add Models
-	modelArray.forEach(model => scene.add(model.m))
+	// Orbit Controls
+	const controls = initializeOrbitControls(camera, canvas)
+
+	// Scene
+	store.scene = new THREE.Scene()
 
 	// Lights
-	scene.add(makePointLight(scene))
+	store.scene.add(makePointLight(store.scene))
+
+	// // Meshes
+	store.scene.add(makePlane())
+	store.scene.add(makeGroup(Object.values(store.nodes)))
+	Object.values(store.lines).forEach(line => {
+		store.scene.add(line)
+	})
+	// // store.scene.add(makeSkin())
 
 	// Window Resize
 	addResizeListener(camera, renderer)
-
-	// Orbit Controls
-	const controls = initializeOrbitControls(camera, canvas)
 	
 	// Animation
-	animationLoop(scene, camera, renderer, controls)
+	animationLoop(store.scene, camera, renderer, controls)
 
-	makeSkin()
+	return store.scene
 
 }

@@ -3,9 +3,11 @@
 	import faceStore from '$facemaker_stores/faceStore'
 	import initialize3DEnvironment from '$facemaker_utils/initialize3DEnvironment'
 
-	let canvas 
-	
-	onMount(() => initialize3DEnvironment(canvas, Object.values($faceStore)))
+	let canvas, scene
+
+	onMount(() => {
+		scene = initialize3DEnvironment(canvas, $faceStore)
+	})
 </script>
 
 

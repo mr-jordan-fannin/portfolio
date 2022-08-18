@@ -1,19 +1,18 @@
 <script>
 	import faceStore from '$facemaker_stores/faceStore'
 	import ModelControls from '$facemaker_components/ModelControls.svelte'
+
+	console.log($faceStore)
 </script>
 
 
 <div id="face-control-panel">
-	<div id="sphere1-controls" class="control-column">
-		<ModelControls model={$faceStore.sphere1.m} />
-	</div>
-	<div id="sphere2-controls" class="control-column">
-		<ModelControls model={$faceStore.sphere2.m} />
-	</div>
-	<div id="sphere3-controls" class="control-column">
-		<ModelControls model={$faceStore.sphere3.m} />
-	</div>
+	{#each [ ...Object.entries($faceStore.nodes) ] as node, i}
+		<div class="control-column" style="border: 1px solid {node[1].color};">
+			<h1>{node[0].toUpperCase()}</h1>
+			<ModelControls model={node[1]} />
+		</div>
+	{/each}
 </div>
 
 
@@ -21,22 +20,14 @@
 	#face-control-panel {
 		align-items: center;
 		display: flex;
-		height: 10vh;
 		justify-content: space-between;
-		width: 80vw;
+		flex-direction: column;
 	}
 	.control-column {
 		border-radius: 20px;
 		padding: 10px;
-		width: 30%;
 	}
-	#sphere1-controls {
-		border: 1px solid green;
-	}
-	#sphere2-controls {
-		border: 1px solid blue;
-	}
-	#sphere3-controls {
-		border: 1px solid red;
+	h1 {
+		margin-bottom: 10px;
 	}
 </style>

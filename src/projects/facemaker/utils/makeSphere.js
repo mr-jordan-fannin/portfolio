@@ -22,6 +22,8 @@ export default function makeSphere({
 
 	sphere.position.z = z
 
+	sphere.color = c
+
 	return sphere
 
 }
